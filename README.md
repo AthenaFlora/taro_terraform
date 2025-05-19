@@ -1,2 +1,5 @@
 # taro_terraform
-terraform code for taro project
+Terraform code for taro project
+
+## Network
+Configure VPC and subnets.

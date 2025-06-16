@@ -8,11 +8,9 @@ terraform {
   backend "s3" {
     bucket         = "taro-terraform-state-bucket"
     key            = "dev/terraform.tfstate"
-    region         = var.region
+    use_lockfile   = true
     encrypt        = true
   }
 }
 
-provider "aws" {
-  region = var.region
-}
+provider "aws" {}

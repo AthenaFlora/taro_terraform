@@ -29,6 +29,6 @@ jobs:
       - name: Deploy Dev Environment
         run: |
           cd environments/dev
-          terraform init
+          terraform init -backend-config="region=${{ secrets.AWS_REGION_DEV }}"
           terraform plan -var="account_id=${{ secrets.AWS_ACCOUNT_ID }}"
           terraform apply -auto-approve -var="account_id=${{ secrets.AWS_ACCOUNT_ID }}"

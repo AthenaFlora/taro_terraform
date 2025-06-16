@@ -10,14 +10,6 @@ variable "environment" {
   }
 }
 
-variable "region" {
-  type        = string
-  default     = "eu-central-1"
-  description = "Selected region to launch the architecture in. Current selection is eu-central-1 (Frankfurt)."
-  nullable    = false
-  sensitive   = true
-}
-
 # AWS Credentials
 variable "account_id" {
   type        = string

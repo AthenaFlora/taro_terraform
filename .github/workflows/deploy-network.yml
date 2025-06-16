@@ -22,8 +22,9 @@ jobs:
       - name: Configure AWS credentials (Dev)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_DEPLOYMENT }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY_DEPLOYMENT }}
+          aws_access_key_deployment: ${{ secrets.AWS_ACCESS_KEY_DEPLOYMENT }}
+          aws_secret_key_deployment: ${{ secrets.AWS_SECRET_KEY_DEPLOYMENT }}
+          account_id: ${{ secrets.ACCOUNT_ID }}
 
       - name: Deploy Dev Environment
         run: |

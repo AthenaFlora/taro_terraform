@@ -1,5 +1,5 @@
 module "network" {
   source     = "../../modules/network"
-  name       = "dev-vpc"
+  name       = "test-vpc"
   environment = var.environment
 }

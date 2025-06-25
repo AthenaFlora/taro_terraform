@@ -12,5 +12,5 @@ variable "rds_security_group_name" {
 }
 
 variable "public_subnet_cidrs" {
-    type = list()
+    type = list(string)
 }

@@ -1,9 +1,9 @@
 resource "aws_db_instance" "db_instance" {
   identifier             = var.name
-  instance_class         = "db.t3.micro"
-  allocated_storage      = 5
-  engine                 = "postgres"
-  engine_version         = "14.1"
+  instance_class         = var.instance_class
+  allocated_storage      = var.allocated_storage
+  engine                 = var.engine
+  engine_version         = var.engine_version
   username               = var.db_username
   password               = var.db_password
   db_subnet_group_name   = var.db_subnet_group_name

@@ -1,9 +1,3 @@
-variable "region" {
-  type     = string
-  default  = "eu-central-1"
-  nullable = false
-}
-
 variable "vpc_name" {
   type = string
   default = "my-vpc"
@@ -20,6 +14,6 @@ variable "database_subnet_group_name" {
 }
 
 variable "public_subnet_cidrs" {
-  type    = list()
+  type    = list(string)
   default = ["10.0.101.0/24"]
 }

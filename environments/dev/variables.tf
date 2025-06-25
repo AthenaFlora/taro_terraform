@@ -10,6 +10,14 @@ variable "environment" {
   }
 }
 
+variable "region" {
+  type = string
+  default = "eu-central-1"
+  description = "The AWS region where the VPC will be created. Defaults to eu-central-1."
+  nullable = false
+  sensitive = true
+}
+
 # AWS Credentials
 variable "account_id" {
   type        = string

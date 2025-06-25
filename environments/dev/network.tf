@@ -5,6 +5,7 @@ module "vpc" {
   cidr = var.vpc_cidr
 
   azs             = ["${var.region}a"]
+  private_subnets = var.private_subnet_cidrs
   public_subnets  = var.public_subnet_cidrs
 
   create_database_subnet_group	= true

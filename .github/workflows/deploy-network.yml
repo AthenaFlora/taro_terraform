@@ -25,8 +25,6 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_DEPLOYMENT }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY_DEPLOYMENT }}
           aws-region: eu-central-1
-          aws-db-username: ${{ secrets.AWS_DB_USERNAME_DEV }}
-          aws-db-password: ${{ secrets.AWS_DB_PASSWORD_DEV }}
 
       - name: Deploy Dev Environment
         run: |

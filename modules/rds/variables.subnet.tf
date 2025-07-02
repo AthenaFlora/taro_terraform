@@ -14,3 +14,8 @@ variable "rds_security_group_name" {
 variable "public_subnet_cidrs" {
     type = list(string)
 }
+
+variable "skip_final_snapshot" {
+  type    = bool
+  default = true
+}

@@ -1,5 +1,6 @@
 variable "name" {
   type     = string
+  default  = "taro-db"
   nullable = false
 }
 
@@ -16,26 +17,36 @@ variable "db_password" {
 variable "engine" {
   type = string
   default = "postgres"
+  nullable = false
+  sensitive = false
 }
 
 variable "engine_version" {
   type = string
-  default = "14.1"
+  default = "15.13"
+  nullable = false
+  sensitive = false
 }
 
 variable "instance_class" {
   type = string
   default = "db.t3.micro"
+  nullable = false
+  sensitive = false
 }
 
 variable "allocated_storage" {
   type = number
   default = 5
+  nullable = false
+  sensitive = false
 }
 
 variable "db_pg_family" {
   type    = string
-  default = "postgres14"
+  default = "postgres15"
+  nullable = false
+  sensitive = false
 }
 
 variable "db_pg_parameters" {
@@ -49,4 +60,11 @@ variable "db_pg_parameters" {
       value = "1"
     }
   ]
+}
+
+variable "publicly_accessible" {
+  type = bool
+  default = false
+  nullable = false
+  sensitive = false
 }

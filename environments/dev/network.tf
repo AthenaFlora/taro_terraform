@@ -10,6 +10,7 @@ module "vpc" {
 
   create_database_subnet_group	= true
   create_database_subnet_route_table	= true
+  database_subnets = var.database_subnets_cidrs
   database_subnet_group_name	= var.database_subnet_group_name
   database_subnet_group_tags	= {
     Terraform = "true"

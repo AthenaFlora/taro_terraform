@@ -5,7 +5,8 @@ on:
     paths:
       - 'modules/**'
       - 'environments/dev/**'
-
+      - '.github/workflows/deploy-network.yml'
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest

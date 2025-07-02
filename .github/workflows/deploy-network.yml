@@ -3,7 +3,7 @@ name: Deploy Dev Network
 on:
   push:
     paths:
-      - 'modules/network/**'
+      - 'modules/**'
       - 'environments/dev/**'
 
 jobs:

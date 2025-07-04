@@ -24,3 +24,7 @@ variable "enable_public_ip" {
   type = bool
   default = false
 }
+
+variable "security_groups_names" {
+  type = list(string)
+}

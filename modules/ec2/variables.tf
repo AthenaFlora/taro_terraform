@@ -25,6 +25,6 @@ variable "enable_public_ip" {
   default = false
 }
 
-variable "security_groups_names" {
+variable "security_groups_ids" {
   type = list(string)
 }

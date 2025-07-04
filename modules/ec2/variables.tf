@@ -19,3 +19,8 @@ variable "ami_most_recent" {
   type = bool
   default = true
 }
+
+variable "enable_public_ip" {
+  type = bool
+  default = false
+}
